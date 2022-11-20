@@ -1,4 +1,4 @@
-## [中文文档](https://github.com/azhon/module_bridge/blob/main/README-zh.md)
+## [Chinese Doc](https://github.com/azhon/module_bridge/blob/main/README-zh.md)
 
 ## Dart modular development event communication library.
 
@@ -9,7 +9,7 @@ Install [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/6351-dart) pl
 ### Step2
 #### Create a communication template in the module `/lib` directory
 
-```java
+```
 import 'package:module_bridge/module_bridge.dart';
 
 class UserBridge with Bridge {
@@ -37,13 +37,13 @@ class UserBridge with Bridge {
 
 2.Register events when initializing the modules
 
-```java
+```
 BridgeManager.instance.register(UserModuleBridge().bridges);
 ```
 
 ### Step4
 In any module communicate through the following code
 
-```java
+```
 var r = await BridgeManager.instance.get('/user/getUserId');
 ```
