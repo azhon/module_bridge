@@ -2,7 +2,7 @@
 
 ### Step1
 
-Install [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/6351-dart) plugin.
+安装 [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/6351-dart) 插件.
 
 ### Step2
 #### 在`/lib`目录下创建通信模板
