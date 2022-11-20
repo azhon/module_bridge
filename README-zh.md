@@ -4,6 +4,14 @@
 
 安装 [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/6351-dart) 插件.
 
+
+2.添加依赖
+
+```
+dependencies:
+    module_bridge: ^latest_version
+```
+
 ### Step2
 #### 在`/lib`目录下创建通信模板
 

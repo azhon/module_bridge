@@ -4,7 +4,14 @@
 
 ### Step1
 
-Install [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/6351-dart) plugin.
+1.Install [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/6351-dart) plugin.
+
+2.Add dependencies
+
+```
+dependencies:
+    module_bridge: ^latest_version
+```
 
 ### Step2
 #### Create a communication template in the module `/lib` directory
