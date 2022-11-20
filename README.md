@@ -42,7 +42,7 @@ BridgeManager.instance.register(UserModuleBridge().bridges);
 ```
 
 ### Step4
-Communicate through `BridgeManager.instance.get()` in any module
+In any module communicate through the following code
 
 ```java
 var r = await BridgeManager.instance.get('/user/getUserId');

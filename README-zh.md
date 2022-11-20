@@ -40,7 +40,7 @@ BridgeManager.instance.register(UserModuleBridge().bridges);
 ```
 
 ### Step4
-在任何模块中通过`BridgeManager.instance.get()`进行通信
+在任何模块中通过如下方式进行通信
 
 ```java
 var r = await BridgeManager.instance.get('/user/getUserId');
