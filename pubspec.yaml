@@ -1,7 +1,7 @@
 name: module_bridge
 description: Dart modular development, event communication library. Dart模块化开发，事件通信库。
 version: 0.0.1
-homepage:
+homepage: https://github.com/azhon/module_bridge
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
