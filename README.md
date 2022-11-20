@@ -2,7 +2,7 @@
 
 ### Step1
 
-Install (FlutterModuleBridge)[https://plugins.jetbrains.com/plugin/6351-dart] plugin.
+Install [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/6351-dart) plugin.
 
 ### Step2
 #### Create a communication template in the module `/lib` directory
@@ -32,11 +32,10 @@ class UserBridge with Bridge {
 ### Step3
 
 1.Use `FlutterModuleBridge` plugin generate class
+
 2.Register events when initializing the modules
 
 ```java
-import 'package:module_bridge/module_bridge.dart';
-
 BridgeManager.instance.register(UserModuleBridge().bridges);
 ```
 
@@ -44,7 +43,5 @@ BridgeManager.instance.register(UserModuleBridge().bridges);
 Communicate through `BridgeManager.instance.get()` in any module
 
 ```java
-import 'package:module_bridge/module_bridge.dart';
-
 var r = await BridgeManager.instance.get('/user/getUserId');
 ```
