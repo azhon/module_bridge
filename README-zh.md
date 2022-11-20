@@ -2,7 +2,7 @@
 
 ### Step1
 
-安装 [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/6351-dart) 插件.
+安装 [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/20491-fluttermodulebridge) 插件.
 
 
 2.添加依赖

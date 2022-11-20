@@ -4,7 +4,7 @@
 
 ### Step1
 
-1.Install [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/6351-dart) plugin.
+1.Install [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/20491-fluttermodulebridge) plugin.
 
 2.Add dependencies
 
