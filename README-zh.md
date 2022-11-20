@@ -1,13 +1,11 @@
-## [中文文档](https://github.com/azhon/module_bridge/blob/main/README-zh.md)
-
-## Dart modular development event communication library.
+## Dart 模块化开发事件通信库
 
 ### Step1
 
 Install [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/6351-dart) plugin.
 
 ### Step2
-#### Create a communication template in the module `/lib` directory
+#### 在`/lib`目录下创建通信模板
 
 ```java
 import 'package:module_bridge/module_bridge.dart';
@@ -25,24 +23,24 @@ class UserBridge with Bridge {
    }
 }
 ```
-⚠️Notice
-- A dart file can only have one class
-- The class must be `with Bridge`
-- The method must be annotated with `@Url`
-- The return value of the method must be `R` or `Future<R>` type
+⚠️注意
+- 一个dart文件只能有一个class
+- class必须`with Bridge`
+- 方法必须使用`@Url`注解
+- 方法返回值必须是`R`或者`Future<R>`类型
 
 ### Step3
 
-1.Use `FlutterModuleBridge` plugin generate class
+1.使用 `FlutterModuleBridge` 插件生成类
 
-2.Register events when initializing the modules
+2.初始化模块的时候注册事件
 
 ```java
 BridgeManager.instance.register(UserModuleBridge().bridges);
 ```
 
 ### Step4
-Communicate through `BridgeManager.instance.get()` in any module
+在任何模块中通过`BridgeManager.instance.get()`进行通信
 
 ```java
 var r = await BridgeManager.instance.get('/user/getUserId');
