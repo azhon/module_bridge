@@ -40,9 +40,10 @@ class BridgeManager {
 
   ///get response by [url]
   Future<R> get(String url) async {
-    if (!exist(url)) {
+    final uri = Uri.parse(url);
+    if (!exist(uri.path)) {
       return R.error(code: RCode.notFound, msg: '$url not found!');
     }
-    return _allBridges[url]!.call();
+    return _allBridges[uri.path]!.call(uri.queryParameters);
   }
 }

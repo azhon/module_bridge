@@ -41,7 +41,8 @@ class _UserPageState extends State<UserPage> {
             _button(
               'update message',
               () async {
-                var r = await BridgeManager.instance.get('/message/update');
+                var r = await BridgeManager.instance
+                    .get('/message/update?name=azhon&id=324');
                 setState(() {
                   updateMessage = r;
                 });
