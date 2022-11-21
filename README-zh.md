@@ -20,13 +20,13 @@ import 'package:module_bridge/module_bridge.dart';
 
 class UserBridge with Bridge {
 
-   @Url(url: '/user/getUserId', desc: 'Get UserId')
-   R getUserId() {
+   @Url(url: '/user/getUserId', desc: '获取用户Id')
+   R getUserId(Map<String, String> params) {
      return R.ok(data: 1234);
    }
 
-   @Url(url: '/user/getUserName', desc: 'Get user name')
-   Future<R> getUserName() async {
+   @Url(url: '/user/getUserName', desc: '获取用户名称')
+   Future<R> getUserName(Map<String, String> params) async {
      return R.ok(data: 'azhon');
    }
 }

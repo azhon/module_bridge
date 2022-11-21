@@ -22,12 +22,12 @@ import 'package:module_bridge/module_bridge.dart';
 class UserBridge with Bridge {
 
    @Url(url: '/user/getUserId', desc: 'Get UserId')
-   R getUserId() {
+   R getUserId(Map<String, String> params) {
      return R.ok(data: 1234);
    }
 
    @Url(url: '/user/getUserName', desc: 'Get user name')
-   Future<R> getUserName() async {
+   Future<R> getUserName(Map<String, String> params) async {
      return R.ok(data: 'azhon');
    }
 }
