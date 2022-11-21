@@ -8,7 +8,7 @@
 
 2.Add dependencies [latest_version](https://pub.dev/packages/module_bridge)
 
-```
+```java
 dependencies:
     module_bridge: ^latest_version
 ```
@@ -16,7 +16,7 @@ dependencies:
 ### Step2
 #### Create a communication template in the module `/lib` directory
 
-```
+```java
 import 'package:module_bridge/module_bridge.dart';
 
 class UserBridge with Bridge {
@@ -44,13 +44,13 @@ class UserBridge with Bridge {
 
 2.Register events when initializing the modules
 
-```
+```java
 BridgeManager.instance.register(UserModuleBridge().bridges);
 ```
 
 ### Step4
 In any module communicate through the following code
 
-```
+```java
 var r = await BridgeManager.instance.get('/user/getUserId');
 ```
