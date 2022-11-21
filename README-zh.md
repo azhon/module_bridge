@@ -5,7 +5,7 @@
 安装 [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/20491-fluttermodulebridge) 插件.
 
 
-2.添加依赖
+2.添加依赖 [latest_version](https://pub.dev/packages/module_bridge)
 
 ```
 dependencies:

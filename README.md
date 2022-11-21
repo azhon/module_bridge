@@ -6,7 +6,7 @@
 
 1.Install [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/20491-fluttermodulebridge) plugin.
 
-2.Add dependencies
+2.Add dependencies [latest_version](https://pub.dev/packages/module_bridge)
 
 ```
 dependencies:
