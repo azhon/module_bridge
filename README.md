@@ -36,7 +36,7 @@ class UserBridge with Bridge {
 - A dart file can only have one class
 - The class must be `with Bridge`
 - The method must be annotated with `@Url`
-- The return value of the method must be `R` or `Future<R>` type
+- The method parameter must be `Map<String, String>`, and the return value must be `R` or `Future<R>` type
 
 ### Step3
 

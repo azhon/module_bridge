@@ -35,7 +35,7 @@ class UserBridge with Bridge {
 - 一个dart文件只能有一个class
 - class必须`with Bridge`
 - 方法必须使用`@Url`注解
-- 方法返回值必须是`R`或者`Future<R>`类型
+- 方法参数必须是`Map<String, String>`，返回值必须是`R`或者`Future<R>`类型
 
 ### Step3
 
