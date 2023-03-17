@@ -1,5 +1,8 @@
 ## Dart 模块化开发事件通信库
 
+<p align="center"><img src="https://github.com/azhon/module_bridge/blob/main/img/logo.png"></p>
+
+
 ### Step1
 
 安装 [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/20491-fluttermodulebridge) 插件.

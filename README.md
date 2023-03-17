@@ -2,6 +2,8 @@
 
 ## Dart modular development event communication library.
 
+<p align="center"><img src="https://github.com/azhon/module_bridge/blob/main/img/logo.png"></p>
+
 ### Step1
 
 1.Install [FlutterModuleBridge](https://plugins.jetbrains.com/plugin/20491-fluttermodulebridge) plugin.
