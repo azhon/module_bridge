@@ -44,10 +44,23 @@ class UserBridge with Bridge {
 
 1.Use `FlutterModuleBridge` plugin generate class
 
-2.Register events when initializing the modules
+2.Create a Module in a submodule and register events in the `register()`
 
 ```java
-BridgeManager.instance.register(UserModuleBridge().bridges);
+class UserModule extends BaseModule {
+  @override
+  void register() {
+    BridgeManager.instance.register(UserModuleBridge().bridges);
+  }
+
+  @override
+  void unregister() {}
+}
+```
+3.Initialize the submodules in the main module
+
+```java
+ModuleManager.add(UserModule());
 ```
 
 ### Step4

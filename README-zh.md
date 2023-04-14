@@ -44,10 +44,23 @@ class UserBridge with Bridge {
 
 1.使用 `FlutterModuleBridge` 插件生成类
 
-2.初始化模块的时候注册事件
+2.在子模块创建Module并在`register`回调内注册事件
 
 ```java
-BridgeManager.instance.register(UserModuleBridge().bridges);
+class UserModule extends BaseModule {
+  @override
+  void register() {
+    BridgeManager.instance.register(UserModuleBridge().bridges);
+  }
+
+  @override
+  void unregister() {}
+}
+```
+3.在主项目中初始化子模块
+
+```java
+ModuleManager.add(UserModule());
 ```
 
 ### Step4
