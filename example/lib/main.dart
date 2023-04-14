@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:message_module/main.dart';
 import 'package:message_module/view/message_page.dart';
+import 'package:module_bridge/module_bridge.dart';
 import 'package:user_module/view/user_page.dart';
 import 'package:user_module/main.dart';
 
 void main() {
   ///init submodule
-  MessageModule().init();
-  UserModule().init();
-
   runApp(const MyApp());
+  ModuleManager.add(MessageModule());
+  ModuleManager.add(UserModule());
 }
 
 class MyApp extends StatelessWidget {
@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             _button(
               'go to MessageModule page',
-              () {
+                  () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => const MessagePage()),
@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 16),
             _button(
               'go to UserModule page',
-              () {
+                  () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => const UserPage()),
