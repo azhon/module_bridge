@@ -5,7 +5,7 @@ import 'package:module_bridge/module_bridge.dart';
 
 class MessageBridge with Bridge {
   @Url(url: '/message/messageCount', desc: 'return msg count')
-  Future<R> getMessageCount(Map<String, String> params) async {
+  Future<R<String>> getMessageCount(Map<String, String> params) async {
     return R.ok(data: '${Random().nextInt(888)}');
   }
 

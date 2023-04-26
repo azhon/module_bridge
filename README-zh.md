@@ -24,12 +24,12 @@ import 'package:module_bridge/module_bridge.dart';
 class UserBridge with Bridge {
 
    @Url(url: '/user/getUserId', desc: '获取用户Id')
-   R getUserId(Map<String, String> params) {
+   Future<R<int>> getUserId(Map<String, String> params) {
      return R.ok(data: 1234);
    }
 
    @Url(url: '/user/getUserName', desc: '获取用户名称')
-   Future<R> getUserName(Map<String, String> params) async {
+   Future<R<String>> getUserName(Map<String, String> params) async {
      return R.ok(data: 'azhon');
    }
 }
@@ -67,5 +67,5 @@ ModuleManager.add(UserModule());
 在任何模块中通过如下方式进行通信
 
 ```java
-var r = await BridgeManager.instance.get('/user/getUserId');
+var r = await BridgeManager.instance.get<int>('/user/getUserId');
 ```

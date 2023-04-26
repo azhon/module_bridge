@@ -28,7 +28,8 @@ class _MessagePageState extends State<MessagePage> {
             _button(
               'get userId',
               () async {
-                var r = await BridgeManager.instance.get('/user/getUserId');
+                var r =
+                    await BridgeManager.instance.get<int>('/user/getUserId');
                 setState(() {
                   userId = r.data;
                 });

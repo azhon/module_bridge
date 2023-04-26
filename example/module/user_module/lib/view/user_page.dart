@@ -29,8 +29,8 @@ class _UserPageState extends State<UserPage> {
             _button(
               'get messageCount',
               () async {
-                var r =
-                    await BridgeManager.instance.get('/message/messageCount');
+                var r = await BridgeManager.instance
+                    .get<String>('/message/messageCount');
                 setState(() {
                   messageCount = r.data;
                 });

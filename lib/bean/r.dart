@@ -4,10 +4,10 @@ import 'package:module_bridge/bean/r_code.dart';
 /// desc:
 ///
 /// @author azhon
-class R {
+class R<T> {
   final int code;
   final String msg;
-  final dynamic data;
+  final T? data;
 
   ///[data] only support [String,num,bool,Map]
   R.ok({this.code = RCode.ok, this.msg = 'ok', this.data}) {
