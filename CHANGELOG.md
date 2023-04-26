@@ -1,3 +1,6 @@
+## 1.0.2
+change R to R<T>
+
 ## 1.0.1
 add ModuleManager
 
