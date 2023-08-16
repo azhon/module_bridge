@@ -11,7 +11,7 @@ typedef BridgeWidgetBuilder<T> = Widget Function(BuildContext context, T? data);
 class BridgeBuilder<T> extends StatelessWidget {
   final String bridge;
   final T? initialData;
-  final BridgeWidgetBuilder builder;
+  final BridgeWidgetBuilder<T> builder;
 
   const BridgeBuilder({
     required this.bridge,
