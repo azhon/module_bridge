@@ -64,8 +64,19 @@ ModuleManager.add(UserModule());
 ```
 
 ### Step4
-在任何模块中通过如下方式进行通信
+- 在任何模块中通过如下方式进行通信
 
 ```java
 var r = await BridgeManager.instance.get<int>('/user/getUserId');
+```
+- 或者在`build`函数中使用
+
+```java
+BridgeBuilder<int>(
+  bridge: '/user/getUserId',
+  builder: (_, data) {
+    /// data有可能为空
+    return Text('通过BridgeBuilder获取数据：$data');
+  },
+),
 ```

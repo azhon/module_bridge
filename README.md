@@ -64,8 +64,19 @@ ModuleManager.add(UserModule());
 ```
 
 ### Step4
-In any module communicate through the following code
+- In any module communicate through the following code
 
 ```java
 var r = await BridgeManager.instance.get<int>('/user/getUserId');
+```
+- Or use in `build` method
+
+```java
+BridgeBuilder<int>(
+  bridge: '/user/getUserId',
+  builder: (_, data) {
+    /// data maybe equal null
+    return Text('use BridgeBuilder get data：$data');
+  },
+),
 ```

@@ -4,6 +4,7 @@
 /// @author azhon
 import 'package:flutter/material.dart';
 import 'package:module_bridge/core/bridge_manager.dart';
+import 'package:module_bridge/module_bridge.dart';
 
 class MessagePage extends StatefulWidget {
   const MessagePage({Key? key}) : super(key: key);
@@ -36,6 +37,15 @@ class _MessagePageState extends State<MessagePage> {
               },
             ),
             Text('userId：$userId'),
+            const SizedBox(height: 20),
+
+            ///通过BridgeBuilder获取数据控制UI
+            BridgeBuilder<int>(
+              bridge: '/user/getUserId',
+              builder: (_, data) {
+                return Text('通过BridgeBuilder获取数据：$data');
+              },
+            ),
           ],
         ),
       ),
