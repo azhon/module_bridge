@@ -19,7 +19,7 @@ class R<T> {
     _check(data);
   }
 
-  ///only support[String],[num],[bool],[Map]
+  ///only support[Null],[String],[num],[bool],[Map]
   void _check(data) {
     if (data == null ||
         data is String ||
@@ -29,7 +29,7 @@ class R<T> {
       return;
     }
     throw Exception('Error: ${data.runtimeType} not supported! '
-        'only support [String,num,bool,Map].');
+        'only support [null,String,num,bool,Map].');
   }
 
   Map<String, dynamic> toJson() {
