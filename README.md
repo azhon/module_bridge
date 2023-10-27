@@ -2,7 +2,7 @@
 
 ## Dart modular development event communication library.
 
-<p align="center"><img src="https://github.com/azhon/module_bridge/blob/main/img/logo.png"></p>
+<p align="center"><img src="https://github.com/azhon/module_bridge/raw/main/img/logo.png"></p>
 
 ### Step1
 
