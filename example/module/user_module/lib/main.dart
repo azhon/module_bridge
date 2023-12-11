@@ -7,7 +7,7 @@ import 'package:user_module/generated/bridge/user_module_bridge.dart';
 class UserModule extends BaseModule {
   @override
   void register() {
-    BridgeManager.instance.register(UserModuleBridge().bridges);
+    BridgeManager.instance.register(UserModuleBridge.instance.bridges);
   }
 
   @override

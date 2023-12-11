@@ -50,7 +50,7 @@ class UserBridge with Bridge {
 class UserModule extends BaseModule {
   @override
   void register() {
-    BridgeManager.instance.register(UserModuleBridge().bridges);
+    BridgeManager.instance.register(UserModuleBridge.instance.bridges);
   }
 
   @override

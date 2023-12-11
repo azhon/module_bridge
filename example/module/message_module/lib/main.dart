@@ -7,7 +7,7 @@ import 'package:module_bridge/core/module_manager.dart';
 class MessageModule extends BaseModule {
   @override
   void register() {
-    BridgeManager.instance.register(MessageModuleBridge().bridges);
+    BridgeManager.instance.register(MessageModuleBridge.instance.bridges);
   }
 
   @override

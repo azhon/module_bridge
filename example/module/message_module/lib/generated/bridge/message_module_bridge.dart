@@ -3,6 +3,7 @@
 import 'package:message_module/message_bridge.dart';
 
 class MessageModuleBridge {
+  static final MessageModuleBridge instance = MessageModuleBridge();
   static final MessageBridge _messageBridge = MessageBridge();
 
   final Map<String, Function> _functions = {

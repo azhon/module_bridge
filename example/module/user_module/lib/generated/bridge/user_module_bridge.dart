@@ -3,6 +3,7 @@
 import 'package:user_module/user_bridge.dart';
 
 class UserModuleBridge {
+  static final UserModuleBridge instance = UserModuleBridge();
   static final UserBridge _userBridge = UserBridge();
 
   final Map<String, Function> _functions = {
